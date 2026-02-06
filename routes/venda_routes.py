@@ -8,7 +8,7 @@ router = APIRouter(
 )
 
 @router.post(
-    reponse_model=Venda,
+    response_model=Venda,
     status_code=status.HTTP_201_CREATED
 )
 def cadastrar_produto(total, data_venda, id_vendendor, id_cliente):
