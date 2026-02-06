@@ -1,5 +1,5 @@
 ﻿from fastapi import HTTPException, APIRouter, status
-from schemas.cliente_schema import Cliente
+from .schemas.cliente_schema import Cliente
 from services.cliente_service import ClienteService
 
 router = APIRouter(
