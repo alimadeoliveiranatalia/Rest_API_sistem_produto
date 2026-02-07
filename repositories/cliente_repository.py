@@ -10,8 +10,15 @@ class ClienteRepository:
         novo_cliente = Cliente(
             **cliente_data.dict()
         )
+        print(novo_cliente)
         clientes.append(novo_cliente)
         return novo_cliente
+    def buscar_cliente(self, id_cliente: int) -> Cliente:
+        """Busca o cliente no banco de Dados passando seu Parâmetro"""
+        for cliente in clientes:
+            if (cliente.id == id_cliente):
+                return cliente
+        
         
 cliente_repository = ClienteRepository()
         

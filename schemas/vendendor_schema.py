@@ -1,8 +1,12 @@
-﻿from datetime import datetime
+﻿from pydantic import BaseModel
+from datetime import datetime
 
-class Vendedor:
-    def __init__(self, id_pessoa, dataCadastro):
-        self.id = 1 # verificar se há função para gerar valores inteiros
-        self.id_pessoa = id_pessoa
-        self.data_cadastro = datetime.date
-        
+class VendedorBase(BaseModel):
+    id_pessoa: int
+    data_cadastro: datetime
+
+class VendendorCreate(VendedorBase):
+    pass
+
+class Vendedor(VendedorBase):
+    id: int
