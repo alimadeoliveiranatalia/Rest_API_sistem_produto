@@ -1,5 +1,5 @@
-﻿from ..schemas.vendendor_schema import VendendorCreate, Vendedor
-from ..repositories.vendendor_repository import vendedor_repository
+﻿from schemas.vendendor_schema import VendendorCreate, Vendedor
+from repositories.vendendor_repository import vendedor_repository
 
 class VendendorService:
     

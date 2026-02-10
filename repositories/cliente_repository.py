@@ -1,5 +1,5 @@
 ﻿from typing import List, Optional
-from ..schemas.cliente_schema import ClienteCreate, Cliente
+from schemas.cliente_schema import ClienteCreate, Cliente
 
 clientes = []
 

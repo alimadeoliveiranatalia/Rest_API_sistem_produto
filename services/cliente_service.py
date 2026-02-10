@@ -1,6 +1,6 @@
 ﻿from typing import List, Optional
-from ..schemas.cliente_schema import ClienteCreate, Cliente
-from ..repositories.cliente_repository import cliente_repository
+from schemas.cliente_schema import ClienteCreate, Cliente
+from repositories.cliente_repository import cliente_repository
 
 class ClienteService:
     

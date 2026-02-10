@@ -1,5 +1,5 @@
 ﻿from typing import List, Optional
-from ..schemas.vendendor_schema import Vendedor, VendendorCreate
+from schemas.vendendor_schema import Vendedor, VendendorCreate
 
 vendendores = []
 
