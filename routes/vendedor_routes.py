@@ -1,6 +1,6 @@
 ﻿from fastapi import HTTPException, APIRouter, status
-from ..schemas.vendendor_schema import Vendedor, VendendorCreate
-from ..services.vendendor_service import vendedor_service
+from schemas.vendendor_schema import Vendedor, VendendorCreate
+from services.vendendor_service import vendedor_service
 router = APIRouter(
     prefix="/vendendor",
     tags=["Vendedor"]
