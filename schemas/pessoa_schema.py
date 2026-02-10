@@ -1,5 +1,14 @@
-﻿class Pessoa:
-    def __init__(self, id,nome,contato):
-        self.id = id
-        self.nome = nome
-        self.contato = contato
+﻿from pydantic import BaseModel
+
+class PessoaBase(BaseModel):
+    nome: str
+    contato: str
+
+class PessoaCreate(PessoaBase):
+    pass
+
+class Pessoa(PessoaBase):
+    id: int
+
+    class Config:
+       from_attributes: True
