@@ -1,6 +1,16 @@
-﻿class ItemVenda:
-    def __init__(self, id, id_produto, quantidade, id_venda):
-       self.id = id
-       self.id_produto = id_produto
-       self.quantidade = quantidade
-       self.id_venda = id_venda 
+﻿from pydantic import BaseModel
+
+
+class ItemVendaBase(BaseModel):
+    id_produto: int
+    quantidade: int
+    id_venda: int
+
+class ItemVendaCreate(ItemVendaBase):
+    pass
+
+class ItemVenda(ItemVendaBase):
+    id: int
+
+    class Config:
+       from_attributes: True

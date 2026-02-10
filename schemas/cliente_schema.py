@@ -1,6 +1,6 @@
 ﻿from pydantic import BaseModel
 from datetime import date
-from ..schemas.pessoa_schema import Pessoa
+from schemas.pessoa_schema import Pessoa
 
 class ClienteBase(BaseModel):
     id_pessoa: int
