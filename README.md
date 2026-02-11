@@ -9,7 +9,7 @@ Esta API (Application program Interface) Efetua processos de Gestão e Vendas de
 - Gestão de Produtos em Estoque
 ## Regras de Negócios
 - Um cliente só pode efetuar uma compra se já estiver cadastrado no sistema.
-- Um vendedor só pode efetuar uma compra se estiver cadastrado no sistama.
+- Um vendedor só pode efetuar uma compra se estiver cadastrado no sistema.
 - A venda de um produto só pode ocorrer se o produto já estiver registrado no sistema.
 - Após a venda de um produto ocorrer deve-se registar baixa no estoque.
 ## Modelagem de Classes 
