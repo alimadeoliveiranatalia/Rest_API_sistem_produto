@@ -8,9 +8,9 @@ class ClienteRepository:
     def cadastrar_cliente(self, cliente_data: ClienteCreate) -> Cliente :
         """ Insere o registro do Cliente no banco de dados """
         novo_cliente = Cliente(
-            **cliente_data.dict()
+            id = len(clientes) + 1,
+            **cliente_data.model_dump()
         )
-        print(novo_cliente)
         clientes.append(novo_cliente)
         return novo_cliente
     def buscar_cliente(self, id_cliente: int) -> Cliente:

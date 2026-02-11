@@ -1,22 +1,13 @@
-﻿from pydantic import BaseModel
-from datetime import date
-from ..schemas.pessoa_schema import Pessoa
+﻿from datetime import datetime
+from ..schemas.pessoa_schema import PessoaBase
 
-class ClienteBase(BaseModel):
-    id_pessoa: int
-    data_cadastro: date
-
-class ClienteCreate(ClienteBase):
+class ClienteCreate(PessoaBase):
     pass
 
-class Cliente(ClienteBase):
+class Cliente(PessoaBase):
     id: int
+    id_pessoa: int
+    data_cadastro: datetime
     
     class Config:
-       orm_mode: True
-
-
-#class Cliente():
-#    def __init__(self, id_pessoa, datacadastro):
-#        self.id_pessoa= id_pessoa,
-#        self.data_cadastro=datacadastro
+       from_attributes: True
