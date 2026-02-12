@@ -9,7 +9,7 @@ class ClienteRepository:
         """ Insere o registro do Cliente no banco de dados """
         novo_cliente = Cliente(
             id = len(clientes) + 1,
-            **cliente_data.model_dump()
+            **cliente_data
         )
         clientes.append(novo_cliente)
         return novo_cliente

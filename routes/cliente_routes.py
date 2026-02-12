@@ -13,7 +13,8 @@ router = APIRouter(
     status_code=status.HTTP_201_CREATED
 )
 def registrar_cliente(cliente_data: ClienteCreate) -> Cliente:
-    return cliente_service.efetuar_cadastro_cliente(cliente_data)
+    cliente = cliente_service.efetuar_cadastro_cliente(cliente_data)
+    return cliente
 
 @router.get(
     "/{id_cliente}",
@@ -22,9 +23,4 @@ def registrar_cliente(cliente_data: ClienteCreate) -> Cliente:
 )
 def buscar_cliente_por_id(id_cliente: int) -> Cliente:
     cliente = cliente_service.buscar_cliente(id_cliente)
-    if not cliente:
-        raise HTTPException(
-            status_code=400,
-            detail="Cliente não encontrado"
-        )
     return cliente
