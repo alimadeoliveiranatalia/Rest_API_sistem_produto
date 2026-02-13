@@ -10,5 +10,5 @@ class PessoaCreate(PessoaBase):
 class Pessoa(PessoaBase):
     id: int
 
-    class Confi:
+    class Config:
         from_attributes: True
